@@ -1,0 +1,388 @@
+
+/* Body Background Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("Magic_Cards/Landscape.JPG") no-repeat center/cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+/* Navigation Bar */
+.navbar{
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    height: 50px;
+    padding: 15px 0;
+    font-family: 'Inter';
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px 25px 10px 10px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    margin: 3px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Magic Container */
+.Magic_container {
+    width: 100%;
+    height: 850px;
+    display: flex;
+}
+
+/* Instruction */
+.Magic_Info {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Magic_Info img {
+    width: 450px;
+}
+
+/* Magic Deck */
+.Magic_deck {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Magic_deck img {
+    width: 150px;
+}
+
+/* Image Button */
+.img_btn {
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Inter';
+    background-color: black;
+    border-radius: 7px;
+}
+
+.disabled img{
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+
+/* Style after four clicks */
+.card_row_transition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Serif Ethiopic Condensed', serif;
+    color: #c29e5b;
+    font-weight: normal;
+    gap: 20px;
+
+}
+
+.card_row_transition h1{
+    font-family: 'Noto Serif Ethiopic Condensed', serif;
+    color: #c29e5b;
+    font-weight: normal;
+}
+
+.card_row_transition .value h1{
+    font-size: 64px;
+}
+
+.card_row_transition .value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card_row_transition img {
+    width: 250px;
+}
+
+.play_again {
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Inter';
+    background: none;
+    border-radius: 7px;
+    font-size: 32px;
+}
+
+.Deck img {
+    border-radius: 7px;
+}
+
+
+/* Small Size screens */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    /* Magic Container */
+    .Magic_container {
+        width: 100%;
+        height: 765px;
+        display: flex;
+    }
+
+    /* Instruction */
+    .Magic_Info {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .Magic_Info img {
+        width: 330px;
+    }
+
+    /* Magic Deck */
+    .Magic_deck img {
+        width: 125px;
+    }
+
+    /* Style after four clicks */
+    .card_row_transition img {
+        width: 200px;
+    }
+
+    .card_row_transition .value h1{
+        font-size: 48px;
+    }
+
+    .play_again {
+        font-size: 24px;
+    }
+}
+
+
+/* Tablet (Landscape) Size screen */
+@media (min-width: 1025px) and (max-width: 1279px) {
+    /* Magic Container */
+    .Magic_container {
+        width: 100%;
+        height: 630px;
+        display: flex;
+    }
+
+    /* Instruction */
+    .Magic_Info {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .Magic_Info img {
+        width: 280px;
+    }
+
+    /* Magic Deck */
+    .Magic_deck img {
+        width: 100px;
+    }
+
+    /* Style after four clicks */
+    .card_row_transition img {
+        width: 150px;
+    }
+
+    .card_row_transition .value h1{
+        font-size: 40px;
+    }
+
+    .play_again {
+        font-size: 20px;
+    }
+}
+
+
+/* Tablet (Portrait) Size screen */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Body style adjustment */
+    body {
+        overflow-y: scroll;
+        background: url("Magic_Cards/Portrait.JPG") no-repeat center/cover;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+    /* Magic Container */
+    .Magic_container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Instruction */
+    .Magic_Info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .Magic_Info img {
+        width: 380px;
+    }
+
+    /* Magic Deck */
+    .Magic_deck {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+
+    .card_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .Magic_deck img {
+        width: 150px;
+    }
+
+    /* Style after four clicks */
+    .card_row_transition img {
+        width: 150px;
+    }
+
+    .card_row_transition .value h1{
+        font-size: 40px;
+    }
+
+    .play_again {
+        font-size: 20px;
+    }
+}
+
+
+/* Mobile Size screen */
+@media (max-width: 767px) {
+    /* Body style adjustment */
+    body {
+        overflow-y: scroll;
+        background: url("Magic_Cards/Portrait.JPG") no-repeat center/cover;
+        background-attachment: fixed;
+        position: relative;
+    }
+
+    /* Magic Container */
+    .Magic_container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Instruction */
+    .Magic_Info {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .Magic_Info img {
+        width: 250px;
+    }
+
+    /* Magic Deck */
+    .Magic_deck {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .card_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Magic_deck img {
+        width: 100px;
+    }
+
+    /* Style after four clicks */
+    .card_row_transition img {
+        width: 75px;
+    }
+
+    .card_row_transition .value h1{
+        font-size: 32px;
+    }
+
+    .play_again {
+        font-size: 16px;
+    }
+}

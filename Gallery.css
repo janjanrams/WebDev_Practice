@@ -1,0 +1,264 @@
+
+/* Body Background Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: black;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+/* Navigation Bar */
+.navbar{
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    height: 50px;
+    padding: 15px 0;
+    font-family: 'Inter';
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px 25px 10px 10px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    margin: 3px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+li a:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Gallery Container */
+.Gallery_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3% 0;
+    gap: 100px;
+}
+
+
+/* Radio Button */
+.radio_btn {
+    display: none;
+}
+
+/* Gallery Row1 design */
+.Gallery_row1 {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Large Image style */
+.large_img {
+    width: 30%; 
+    height: auto;
+}
+
+.large_img img {
+    width: 100%;
+}
+
+/* Image Carousel */
+.img_carousel {
+    width: 50%;
+    overflow-x: hidden;
+    mask: linear-gradient(90deg, transparent, white 40%, white 40%, transparent);
+    background: url("Gallery/Gallery_Landscape.JPG") no-repeat center/cover;
+}
+
+.carousel_row {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    transition: margin 5s;
+    transition-delay: 2s;
+}
+
+
+/* Sliding Carousel */
+:root {
+    --first-margin: 0;
+    --second-margin: -15%;
+    --third-margin: -25%;
+    --fourth-margin: 0;
+    --fifth-margin: -15%;
+}
+
+
+/* Image Label */
+.Gallery_row1 .image-label {
+    position: absolute;
+    background-color: black;
+    bottom: 20%;
+    left: 25%;
+    width: auto;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-size: 40px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+}
+
+
+
+.Gallery_row2 {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: url("Gallery/Gallery_Landscape.JPG") no-repeat center/cover;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Gallery_row2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none; 
+    z-index: 1; 
+}
+
+/* Landscape Image Slider */
+.Landscape_slider {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    padding: 1% 0;
+    z-index: 2; 
+    box-sizing: border-box;
+}
+
+.slider_btn {
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: 'Inter';
+    background: none;
+    border-radius: 7px;
+}
+
+button {
+    width: 2.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 64px;
+}
+
+.Landscape, .Portrait {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.Limg_zone, .Pimg_zone {
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    transition: margin 1s;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Landscape .slide .element {
+    width: 23%;
+    min-width: 23%;
+    height: 100%;
+    position: relative;
+    padding: 0 1%;
+}
+
+
+.Portrait_slider {
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    padding: 1% 0;
+    z-index: 2; 
+    box-sizing: border-box;
+}
+
+.Portrait .slide .element {
+    width: 17%;
+    min-width: 17%;
+    height: 100%;
+    position: relative;
+    padding: 0 4%;
+}
+
+
+
+/* Small Size screens */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    /* Gallery Container */
+    .Gallery_row1 .image-label {
+        font-size: 32px;
+    }
+
+    .Gallery_row2 {
+        height: 600px;
+    }
+}
+
+/* Tablet (Landscape) Size screen */
+@media (min-width: 1025px) and (max-width: 1279px) {
+    /* Gallery Container */
+    .Gallery_row1 .image-label {
+        font-size: 24px;
+        padding: 6px 6px;
+    }
+
+    .Gallery_row2 {
+        height: 500px;
+    }
+}

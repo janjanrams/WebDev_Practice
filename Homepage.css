@@ -1,0 +1,232 @@
+
+/* Body Background Styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: url("Background/Homepage_bg.JPG") no-repeat center/cover;
+    opacity: 0.6;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
+    z-index: -1; 
+}
+
+
+/* Navigation Bar */
+.navbar{
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    height: 50px;
+    padding: 15px 0;
+    font-family: 'Inter';
+}
+
+ul {
+    list-style-type: none;
+    margin: 10px 25px 10px 10px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    margin: 3px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+li a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/* Main Heading */
+.Main_heading {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Main_heading h1 {
+    color: white;
+    font-family: 'Inter';
+    font-size: 128px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/* image button container */
+.imgbtn_container {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.imgbtn_container a {
+    position: relative;
+    top: 8%;
+    width: 300px;
+    height: 130px;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.imgbtn_container a .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.imgbtn_container a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+}
+
+.imgbtn_container a .image-label {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: 'Inter';
+    font-size: 32px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.imgbtn_container a:hover img {
+    opacity: 1;
+}
+
+
+/* Small Size screens */
+@media (min-width: 1280px) and (max-width: 1440px) {
+    /* Main Heading */
+    .Main_heading h1 {
+        font-size: 115px;
+    }
+
+    /* Image Button Container */
+    .imgbtn_container {
+        gap: 45px;
+    }
+
+    .imgbtn_container a {
+        width: 240px;
+        height: 104px;
+    }
+
+    .imgbtn_container a .image-label {
+        font-size: 28px;
+    }
+}
+
+
+/* Tablet (Landscape) Size screen */
+@media (min-width: 1025px) and (max-width: 1279px) {
+    /* Main Heading */
+    .Main_heading h1 {
+        font-size: 102px;
+    }
+
+    /* Image Button Container */
+    .imgbtn_container {
+        gap: 35px;
+    }
+
+    .imgbtn_container a {
+        width: 216px;
+        height: 104px;
+    }
+
+    .imgbtn_container a .image-label {
+        font-size: 25px;
+    }
+}
+
+
+/* Tablet (Portrait) Size screen */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Main Heading */
+    .Main_heading h1 {
+        font-size: 75px;
+    }
+
+    /* Image Button Container */
+    .imgbtn_container {
+        gap: 20px;
+    }
+
+    .imgbtn_container a {
+        width: 175px;
+        height: 75px;
+    }
+
+    .imgbtn_container a .image-label {
+        font-size: 22px;
+    }
+}
+
+
+/* Mobile Size screen */
+@media (max-width: 767px) {
+    /* Navigation Bar */
+    .navbar{
+        height: 35px;
+        padding: 10px 0;
+        font-size: 13px;
+    }
+
+    /* Main Heading */
+    .Main_heading {
+        height: 35%;
+    }
+
+    .Main_heading h1 {
+        font-size: 40px;
+    }
+
+    /* Image Button Container */
+    .imgbtn_container {
+        display: block;
+        text-align: center;
+    }
+
+    .imgbtn_container a {
+        width: 175px;
+        height: 75px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .imgbtn_container a .image-label {
+        font-size: 22px;
+    }
+}
